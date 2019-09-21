@@ -1,0 +1,301 @@
+@import 'header';
+
+/* Start Custom SCSS */
+
+* {
+    color: $cor-primaria;
+    max-width: 100%;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    @extend %u-display-flex;
+    @extend %u-flex-total-centered;
+    @extend %u-flex-direction-column;
+    @extend %u-flex-wrap-wrap;
+    margin: 0px;
+}
+
+h1 {
+    font-size: 3.75em;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h2 {
+    font-size: 2.25em;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h3 {
+    font-size: 1.37em;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+h4 {
+    font-size: 1em;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+p {
+    font-size: 1.06em;
+    line-height: 30px;
+}
+
+.page {
+    width: 100%;
+    @extend %u-display-flex;
+    @extend %u-flex-align-items-center;
+    @extend %u-flex-direction-column;
+}
+
+.page__content {
+    width: 100%;
+    @extend %u-display-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.banner {
+    width: 1320px;
+    @extend %u-display-flex;
+    @extend %u-flex-align-items-center;
+    justify-content: space-between;
+    height: 95vh;
+    h1 {
+        border-bottom: 8px solid $cor-ternaria;
+        padding-bottom: 0px;
+        display: inline-grid;
+        margin: 0px;
+    }
+    &__column-one {
+        max-width: 80%;
+        @extend %u-display-flex;
+        @extend %u-flex-direction-column;
+    }
+    &__column-two {
+        max-width: 20%;
+        @extend %u-display-flex;
+        @extend %u-flex-direction-column;
+    }
+    &__description {
+        margin-top: 20px;
+    }
+    &__description p {
+        font-size: 21px;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        height: 40vh;
+        h1 {
+            font-size: 2em;
+        }
+        &__img {
+            display: none;
+        }
+        * {
+            margin: 12px;
+        }
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1em;
+        }
+        &__description p {
+            font-size: 0.75em;
+            width: 90%;
+        }
+    }
+}
+
+.cases {
+    width: 1320px;
+    @extend %u-display-flex;
+    @extend %u-flex-direction-column;
+    z-index: 1;
+    h2 {
+        font-size: 22px;
+    }
+    @media (max-width: 1024px) {
+        text-align: center;
+    }
+    &__content {
+        display: flex;
+        align-items: stretch;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            h4 {
+                font-size: 0.75em;
+            }
+        }
+    }
+    &__element {
+        @extend %u-display-flex;
+        @extend %u-flex-direction-column;
+    }
+    &__element {
+        @media (max-width: 768px) {
+            width: 500px;
+            max-width: 100%;
+        }
+    }
+    &__element img {
+        max-width: 100%;
+    }
+    &__img {
+        max-width: 100%;
+    }
+    &__unilever {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    &__akora {
+        flex-grow: 1;
+        margin: 0 20px;
+    }
+    &__attach {
+        flex-grow: 1;
+        margin-left: 10px;
+    }
+}
+
+.block-space {
+    width: 100%;
+    height: 750px;
+    background: $cor-fundo-um;
+    position: absolute;
+    transform: skewY(5deg);
+    top: 1250px;
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.back-ground-oquefazemos {
+    background: $cor-fundo-um;
+    position: relative;
+}
+
+.oquefazemos {
+    width: 1320px;
+    background: $cor-fundo-um;
+    padding-top: 50px;
+    &--diagonal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__line-one {
+        @extend %u-display-flex;
+    }
+    &__column-one {
+        max-width: 50%;
+        @extend %u-display-flex;
+        @extend %u-flex-direction-column;
+        @extend %u-flex-justify-content-flex-end;
+    }
+    &__column-two {
+        width: 50%;
+        @extend %u-display-flex;
+        @extend %u-flex-align-items-center;
+        @extend %u-flex-justify-content-flex-end;
+    }
+    &__line-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 40px 0px;
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__element {
+        height: 200px;
+        margin: 40px 0px;
+        max-width: 75%;
+    }
+    @media (max-width: 1024px) {
+        * {
+            text-align: center;
+            justify-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+        &__column-two {
+            display: none;
+        }
+        &__line-one {
+            align-items: center;
+        }
+        &__element {
+            margin: 40px 40px;
+        }
+    }
+}
+
+.back-ground-clientes {
+    background: $cor-fundo-dois;
+}
+
+.clientes {
+    width: 1320px;
+    padding: 90px 0;
+    &__section-logos {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__logos {
+        margin: 30px 0;
+    }
+    @media (max-width: 1024px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        &__logos {
+            margin: 30px 50px;
+        }
+    }
+}
+
+.back-ground-footer {
+    background: $cor-fundo-tres;
+}
+
+.footer {
+    width: 1320px;
+    padding: 50px 0;
+    @media (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 300px) {
+    .page__content * {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .oquefazemos__element {
+        margin: 80px 0px;
+    }
+    .banner h1 {
+        font-size: 0.75em;
+    }
+    .banner p {
+        font-size: 0.60em;
+    }
+}
